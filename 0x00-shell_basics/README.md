@@ -1,1 +1,1 @@
-A script that creates directories welcome/, welcome/to/ and welcom/to/school using only two spaces 
+A script that lists all filese and directories separated by comma,hidden,sorted by digits and letters respectively, and directory names end with / 
