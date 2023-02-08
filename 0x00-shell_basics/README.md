@@ -1,1 +1,1 @@
-A script that prints they type of the named iamafile which is inside a directory /tmp
+A script that creates a symbolic link __ls__ to /bin/ls in the current directory
