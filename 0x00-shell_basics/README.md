@@ -1,1 +1,1 @@
-A script that deletes all the files in the current working directory that ends with the character ~ 
+A script that creates directories welcome/, welcome/to/ and welcom/to/school using only two spaces 
