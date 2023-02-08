@@ -1,1 +1,1 @@
-A script that deletes my_first_directory from /tmp directory
+A script that changes the working directory to the previous one
