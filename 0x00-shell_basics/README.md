@@ -1,1 +1,1 @@
-A script that moves all files beginning with uppercase letter to the directory /tmp/u
+A script that deletes all the files in the current working directory that ends with the character ~ 
