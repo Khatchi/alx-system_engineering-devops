@@ -1,1 +1,1 @@
-A script that lists current parent and /boot directories's contents including hidden files in long format
+A script that prints they type of the named iamafile which is inside a directory /tmp
