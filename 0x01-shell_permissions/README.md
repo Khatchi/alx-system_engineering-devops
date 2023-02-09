@@ -1,1 +1,1 @@
-A script that cahnges the group owner to school for the file hello
+A script that cahnges the owner to vincent and the group owner to staff for all files and directories
