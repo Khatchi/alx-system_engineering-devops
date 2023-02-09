@@ -1,1 +1,1 @@
-A script that cahnges the owner to vincent and the group owner to staff for all files and directories
+A script that cahnges the owner and the group owner of _hello to vincent and staff respectively
