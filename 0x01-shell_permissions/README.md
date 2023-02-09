@@ -1,1 +1,1 @@
-A scrip that prints the effective username of the current user
+A scrip that prints all the groups the current user is part of
