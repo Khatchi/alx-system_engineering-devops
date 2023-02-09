@@ -1,1 +1,1 @@
-A script that that sets the mode of the file hell the same as olleh's mode
+A script that that adds executive permission to all subdir of the current of the owner, group and all other users
