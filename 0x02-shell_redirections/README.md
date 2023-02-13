@@ -1,1 +1,1 @@
-A script that displays  the third line of the file iacta
+A script thatcreates a file named exactly \*\\'"Best School"\'\\*$\?\*\*\*\*\*:) containing the text Best School ending by a new line
