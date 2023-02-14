@@ -1,1 +1,1 @@
-A script that encodes and decodes text using the rot13 encryption. Asumm ASCII
+A script that prints every other line from te input, starting with the first line
