@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# A script that displays "Best School"; bad luck $ good luck in  & 8 iterations
+i=0
+while ((i < 10))
+do
+	((i++))
+	if [ $i -eq 4 ]
+	then
+		echo "bad luck"
+	elif [ $i -eq 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+done
