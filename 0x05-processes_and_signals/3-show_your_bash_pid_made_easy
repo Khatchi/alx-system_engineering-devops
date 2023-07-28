@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# A script that displays the along with the process name, and processes containing a bash word
+# Requirement:
+#	cannot use ps
+pgrep -l bash
