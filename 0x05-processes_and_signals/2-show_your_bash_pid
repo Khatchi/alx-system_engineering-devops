@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# A script that displays list of currently running processes for ONLY line containing a bash word
+# Conditions:
+#	Must show all processes for all users including those without a TTY
+#	Display format is user-oriented
+#	Also shows process hierarchy
+# shellcheck disable=SC2009
+ps faux | grep bash
