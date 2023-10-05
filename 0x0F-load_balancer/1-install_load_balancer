@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# configure and install HAOroxy on  loadbalancer server lb-01
+
+sudo apt-get -y update
+sudo apt-get -y install haproxy
+sudo sh -c 'echo "\nlisten myserver\n\tbind *:80\n\tbalance roundrobin\n\tserver server1 54.165.36.243:80 check\n\tserver server2 100.24.244.222:80 check\n" >> /etc/haproxy/haproxy.cfg'
+sudo service haproxy restart
