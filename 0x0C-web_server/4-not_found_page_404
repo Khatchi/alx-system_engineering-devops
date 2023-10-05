@@ -1,19 +1,17 @@
 #!/usr/bin/env bash
 # A bash scrpt that configures my Nginx server to have a custom 404 page that contains the string
 
+oldstr="server_name _;"
+newstr="server_name _;\n\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}"
 
 sudo apt-get -y update
-sudo apt-get install -y nginx
+sudo apt-get -y install nginx
+sudo sh -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html'
+sudo sed -i -e "s|$oldstr|$newstr|" /etc/nginx/sites-enabled/default
 
-echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
-string_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;"
-sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
+oldstr="=404;"
+newstr="@oui_oui_baguette;\n\t}\n\n\tlocation @oui_oui_baguette {\n\t\tdefault_type text/html;\n\t\treturn 404 \"Ceci n\'est pas une page\";"
 
+sudo sed -i -z "s|$oldstr|$newstr|" /etc/nginx/sites-enabled/default
 
-# creates an error page and add a redirect for error 404
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
-string_for_replacement="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
-sudo sed -i "s/listen 80 default_server;/$string_for_replacement/" /etc/nginx/sites-enabled/default
-
-# restart the nginx server
 sudo service nginx restart
