@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# A bash script that queries and displays information about subdomains
+
+query_dns() {
+	local domain=$1
+	local sub=$2
+	ip=$(dig "$sub"."$domain" | grep -A1 'ANSWER SECTION:' | awk '{print $5}' | tail -1)
+	record_type=$(dig "$sub"."$domain" | grep -A1 'ANSWER SECTION:' | awk '{print $4}' | tail -1)
+	echo "The subdomain $sub is a $record_type record and points to $ip"
+}
+if [ $# -eq 2 ]; then
+	query_dns "$1" "$2"
+else
+	query_dns "$1" 'www'
+	query_dns "$1" 'lb-01'
+	query_dns "$1" 'web-01'
+	query_dns "$1" 'web-02'
+fi
