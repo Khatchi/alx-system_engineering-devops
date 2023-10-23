@@ -27,7 +27,8 @@ if __name__ == '__main__':
             doneLists.append(item)
             done += 1
 
-    print(f'Employee {employeeName} is done with tasks({done}/{len(todosItems)}):')
+    strr = 'is done with tasks'
+    print(f'Employee {employeeName} {strr}({done}/{len(todosItems)}):')
 
     for item in doneLists:
         print(f"\t{item['title']}")
