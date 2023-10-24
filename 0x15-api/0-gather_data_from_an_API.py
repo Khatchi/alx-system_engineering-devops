@@ -27,9 +27,9 @@ if __name__ == '__main__':
             doneLists.append(item)
             done += 1
 
-    strr = 'is done with tasks'
+    s = 'is done with tasks'
     e = 'Employee'
-    print('e {} {}({}/{}):'.format(employeeName, strr, done, len(todosItems)))
+    print('{} {} {}({}/{}):'.format(e, employeeName, s, done, len(todosItems)))
 
     for item in doneLists:
         print('\t{}'.format(item['title']))
