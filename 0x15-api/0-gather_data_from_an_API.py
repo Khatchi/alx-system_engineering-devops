@@ -10,12 +10,12 @@ import sys
 if __name__ == '__main__':
     employeeId = sys.argv[1]
     baseUrl = "https://jsonplaceholder.typicode.com/users"
-    employeeUrl = f"{baseUrl}/{employeeId}"
+    employeeUrl = '{}/{}'.format(baseUrl, employeeId)
 
     response = requests.get(employeeUrl)
     employeeName = response.json().get('name')
 
-    todosUrl = f'{employeeUrl}/todos'
+    todosUrl = '{}/todos'.format(employeeUrl)
     todosResponse = requests.get(todosUrl)
     todosItems = todosResponse.json()
 
@@ -28,7 +28,7 @@ if __name__ == '__main__':
             done += 1
 
     strr = 'is done with tasks'
-    print(f'Employee {employeeName} {strr}({done}/{len(todosItems)}):')
+    print('Employee {} {}({}/{}):'.format(employeeName, strr, done, len(todosItems)))
 
     for item in doneLists:
-        print(f"\t{item['title']}")
+        print('\t{}'.format(item['title']))
