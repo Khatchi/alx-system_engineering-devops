@@ -5,7 +5,7 @@ import requests
 import re
 
 
-def count_words(subreddit, word_list, counts={}, after=None):
+def count_words(subreddit, word_list, counts={}, after=''):
     """
     Queries the Reddit API, parses the titles of hot articles,
     and prints a sorted count of given keywords.
