@@ -1,7 +1,4 @@
-# Use the file_edit resource type to edit a specific file
-file_line { 'fix_error':
-    path    => '/var/www/html/wp-settings.php',
-    line => 'php',
-    match  => 'phpp',
+# replace .phpp with .php in wp-settings.php
+exec { 'fix wordpress':
+  command     => "/bin/sed -i 's/phpp/php/g' /var/www/html/wp-settings.php",
 }
-
