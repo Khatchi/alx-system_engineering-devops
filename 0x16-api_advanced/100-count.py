@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module counts words using reddit API """
 
+import re
 import requests
 
 
