@@ -5,7 +5,6 @@ import re
 import requests
 
 
-
 def count_words(subreddit, word_list, counts={}, after=None):
     """
     Queries the Reddit API, parses the titles of hot articles,
