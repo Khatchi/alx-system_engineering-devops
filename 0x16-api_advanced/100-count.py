@@ -2,7 +2,6 @@
 """This module counts words using reddit API """
 
 import requests
-import re
 
 
 def count_words(subreddit, word_list, counts={}, after=None):
